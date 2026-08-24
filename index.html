@@ -13,13 +13,13 @@
 <meta property="og:title" content="Розовое платье на шинах БелАЗа">
 <meta property="og:description" content="Твоя идея про эпатажный сайт. Вот что из неё получается, если довести до конца">
 <meta property="og:url" content="https://markmateriaai-crypto.github.io/dorsnab-presentation/">
-<meta property="og:image" content="https://markmateriaai-crypto.github.io/dorsnab-presentation/img/01-hero-doroga.jpg">
+<meta property="og:image" content="https://markmateriaai-crypto.github.io/dorsnab-presentation/img/09-plate-shiny.jpg">
 <meta property="og:image:width" content="2000">
 <meta property="og:image:height" content="1116">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Розовое платье на шинах БелАЗа">
 <meta name="twitter:description" content="Твоя идея про эпатажный сайт. Вот что из неё получается, если довести до конца">
-<meta name="twitter:image" content="https://markmateriaai-crypto.github.io/dorsnab-presentation/img/01-hero-doroga.jpg">
+<meta name="twitter:image" content="https://markmateriaai-crypto.github.io/dorsnab-presentation/img/09-plate-shiny.jpg">
 
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%230c0c0e'/%3E%3Crect x='4' y='14' width='9' height='4' fill='%23ff3d8b'/%3E%3Crect x='19' y='14' width='9' height='4' fill='%23ff3d8b'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -53,6 +53,7 @@ body{
 }
 img{max-width:100%;height:auto;display:block}
 picture{display:contents}
+figure{margin:0}
 h1,h2,h3{font-family:var(--f-display);font-weight:500;line-height:1.04;
   letter-spacing:-.01em;margin:0;text-transform:uppercase}
 p{margin:0 0 1.1em}
@@ -88,8 +89,8 @@ section{padding:clamp(56px,8vw,104px) 0;position:relative}
   radial-gradient(120% 90% at 60% 20%,#26202a 0%,transparent 62%),
   linear-gradient(180deg,#17171b 0%,#0c0c0e 78%)}
 .hero-bg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
-  object-position:center 55%;opacity:.5}
-@media(min-width:860px){.hero-bg img{opacity:.46}}
+  object-position:center 48%;opacity:.72}
+@media(min-width:860px){.hero-bg img{opacity:.66}}
 .hero-veil{position:absolute;inset:0;z-index:1;background:
   linear-gradient(180deg,rgba(12,12,14,.36) 0%,rgba(12,12,14,.7) 55%,var(--ink) 100%)}
 .hero .wrap{position:relative;z-index:2;width:100%}
@@ -172,11 +173,7 @@ section{padding:clamp(56px,8vw,104px) 0;position:relative}
   color:var(--mute-2);border-top:1px solid var(--line);line-height:1.5;
   letter-spacing:.04em}
 .figpair{display:grid;gap:14px}
-.figure.sq img{aspect-ratio:1/1}
 .figure.wide img{aspect-ratio:16/9}
-.chipwrap{display:grid;gap:clamp(20px,3vw,34px);align-items:start;
-  grid-template-columns:1fr}
-@media(min-width:820px){.chipwrap{grid-template-columns:1.45fr .85fr}}
 .pull{border-left:3px solid var(--pink);padding:6px 0 6px 22px;margin:26px 0;
   font-family:var(--f-display);font-size:clamp(1.3rem,3.4vw,2rem);
   line-height:1.22;text-transform:uppercase;font-weight:500}
@@ -275,8 +272,8 @@ section{padding:clamp(56px,8vw,104px) 0;position:relative}
 <!-- ГЕРОЙ · КАДР 09 -->
 <header class="hero">
   <div class="hero-bg">
-    <picture><source type="image/webp" srcset="img/01-hero-doroga-sm.webp 1300w, img/01-hero-doroga.webp 2000w" sizes="100vw"><img src="img/01-hero-doroga.jpg"
-         srcset="img/01-hero-doroga-sm.jpg 1300w, img/01-hero-doroga.jpg 2000w"
+    <picture><source type="image/webp" srcset="img/09-plate-shiny-sm.webp 1300w, img/09-plate-shiny.webp 2000w" sizes="100vw"><img src="img/09-plate-shiny.jpg"
+         srcset="img/09-plate-shiny-sm.jpg 1300w, img/09-plate-shiny.jpg 2000w"
          sizes="100vw" alt="" width="2000" height="1116"
          fetchpriority="high" decoding="async"></picture>
   </div>
@@ -339,7 +336,13 @@ section{padding:clamp(56px,8vw,104px) 0;position:relative}
     <div class="trio">
       <div class="rv">
         <!-- КАДР 10 · стена шин -->
-        <figure class="figure"><div class="ph">Кадр 10 · стена шин</div></figure>
+        <figure class="figure">
+          <picture><source type="image/webp" srcset="img/10-stena-shin-sm.webp 1100w, img/10-stena-shin.webp 1200w" sizes="(min-width:760px) 32vw, 90vw"><img src="img/10-stena-shin.jpg"
+               srcset="img/10-stena-shin-sm.jpg 1100w, img/10-stena-shin.jpg 1200w"
+               sizes="(min-width:760px) 32vw, 90vw"
+               alt="Отработанные шины карьерной техники, сложенные штабелями"
+               width="1200" height="896" loading="lazy" decoding="async"></picture>
+        </figure>
         <span class="step-n">Шаг 01</span>
         <h3>Отслужившая покрышка</h3>
         <p>Сжигать вредно, закапывать бессмысленно: покрышка разлагается больше ста лет.</p>
@@ -386,8 +389,8 @@ section{padding:clamp(56px,8vw,104px) 0;position:relative}
 
 <!-- ФОТОПОЛОСА · КАДР 11 -->
 <div class="strip">
-  <picture><source type="image/webp" srcset="img/02-asfalt-makro-sm.webp 1300w, img/02-asfalt-makro.webp 1800w" sizes="100vw"><img src="img/02-asfalt-makro.jpg"
-       srcset="img/02-asfalt-makro-sm.jpg 1300w, img/02-asfalt-makro.jpg 1800w"
+  <picture><source type="image/webp" srcset="img/11-tkan-na-kroshke-sm.webp 1300w, img/11-tkan-na-kroshke.webp 1800w" sizes="100vw"><img src="img/11-tkan-na-kroshke.jpg"
+       srcset="img/11-tkan-na-kroshke-sm.jpg 1300w, img/11-tkan-na-kroshke.jpg 1800w"
        sizes="100vw" alt="" width="1800" height="1004"
        loading="lazy" decoding="async"></picture>
 </div>
@@ -523,8 +526,6 @@ section{padding:clamp(56px,8vw,104px) 0;position:relative}
       <p class="eyebrow">06 · Подтверждения</p>
       <h2>То, что сейчас никто не находит</h2>
     </div>
-    <div class="chipwrap">
-    <div>
     <div class="chips rv">
       <span class="chip">Сертификат соответствия продукции наноиндустрии</span>
       <span class="chip">Технический регламент Таможенного союза</span>
@@ -536,13 +537,6 @@ section{padding:clamp(56px,8vw,104px) 0;position:relative}
     <p class="lede rv" style="margin-top:30px">Сейчас часть этого лежит ссылками на скачивание
     внутри одной страницы, часть - логотипами в подвале без подписей. Для человека, который
     решает, стоит ли связываться с консорциумом, это и есть главный аргумент. Сейчас его надо искать.</p>
-    </div>
-    <figure class="figure sq rv">
-      <picture><source type="image/webp" srcset="img/08-razmetka.webp"><img src="img/08-razmetka.jpg"
-           alt="Дорожная разметка на асфальте"
-           width="1000" height="1000" loading="lazy" decoding="async"></picture>
-    </figure>
-    </div>
   </div>
 </section>
 
@@ -729,9 +723,9 @@ section{padding:clamp(56px,8vw,104px) 0;position:relative}
 <!-- ФИНАЛ · КАДР 12 -->
 <section class="final">
   <div class="final-bg">
-    <picture><source type="image/webp" srcset="img/06-doroga-sm.webp 1300w, img/06-doroga.webp 2000w" sizes="100vw"><img src="img/06-doroga.jpg"
-         srcset="img/06-doroga-sm.jpg 1300w, img/06-doroga.jpg 2000w"
-         sizes="100vw" alt="" width="2000" height="849"
+    <picture><source type="image/webp" srcset="img/12-rozovaya-razmetka-sm.webp 1300w, img/12-rozovaya-razmetka.webp 2000w" sizes="100vw"><img src="img/12-rozovaya-razmetka.jpg"
+         srcset="img/12-rozovaya-razmetka-sm.jpg 1300w, img/12-rozovaya-razmetka.jpg 2000w"
+         sizes="100vw" alt="" width="2000" height="1116"
          loading="lazy" decoding="async"></picture>
   </div>
   <div class="wrap">
