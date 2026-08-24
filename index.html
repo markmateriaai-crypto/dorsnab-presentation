@@ -3,28 +3,25 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Новый сайт консорциума ДОРСНАБ</title>
-<meta name="description" content="Что происходит с сайтом сейчас, каким он станет и сколько это стоит">
+<title>Розовое платье на шинах БелАЗа</title>
+<meta name="description" content="Что получается из вашей идеи, если довести её до конца">
 <meta name="robots" content="noindex, nofollow">
 <meta name="theme-color" content="#0c0c0e">
 
-<!-- Превью при отправке ссылки в телеграм и другие мессенджеры.
-     ВАЖНО: og:url и og:image заработают только после деплоя, когда появится
-     настоящий адрес. Заменить https://markmateriaai-crypto.github.io/dorsnab-presentation на него в трёх местах ниже. -->
 <meta property="og:type" content="website">
 <meta property="og:locale" content="ru_RU">
-<meta property="og:title" content="Новый сайт консорциума ДОРСНАБ">
-<meta property="og:description" content="Что сейчас происходит с dor-snab.com и что я предлагаю с этим сделать">
+<meta property="og:title" content="Розовое платье на шинах БелАЗа">
+<meta property="og:description" content="Ваша идея про эпатажный сайт. Вот что из неё получается, если довести до конца">
 <meta property="og:url" content="https://markmateriaai-crypto.github.io/dorsnab-presentation/">
 <meta property="og:image" content="https://markmateriaai-crypto.github.io/dorsnab-presentation/img/01-hero-doroga.jpg">
 <meta property="og:image:width" content="2000">
 <meta property="og:image:height" content="1116">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Новый сайт консорциума ДОРСНАБ">
-<meta name="twitter:description" content="Что сейчас происходит с dor-snab.com и что я предлагаю с этим сделать">
+<meta name="twitter:title" content="Розовое платье на шинах БелАЗа">
+<meta name="twitter:description" content="Ваша идея про эпатажный сайт. Вот что из неё получается, если довести до конца">
 <meta name="twitter:image" content="https://markmateriaai-crypto.github.io/dorsnab-presentation/img/01-hero-doroga.jpg">
 
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%230c0c0e'/%3E%3Crect x='4' y='14' width='9' height='4' fill='%23fcc71f'/%3E%3Crect x='19' y='14' width='9' height='4' fill='%23fcc71f'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%230c0c0e'/%3E%3Crect x='4' y='14' width='9' height='4' fill='%23ff3d8b'/%3E%3Crect x='19' y='14' width='9' height='4' fill='%23ff3d8b'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -37,10 +34,9 @@
   --paper:#f4f3f0;
   --mute:#8e8e94;
   --mute-2:#8b8b91;
-  --yellow:#fcc71f;
-  --yellow-dim:#8a6d12;
+  --pink:#ff3d8b;
+  --pink-dim:#8c2a4e;
   --red:#e5484d;
-  --green:#3dd68c;
   --f-display:'Oswald',Impact,sans-serif;
   --f-body:'IBM Plex Sans',-apple-system,BlinkMacSystemFont,sans-serif;
   --f-mono:'IBM Plex Mono',ui-monospace,monospace;
@@ -65,18 +61,19 @@ p:last-child{margin-bottom:0}
 /* ---------- служебное ---------- */
 .wrap{max-width:var(--maxw);margin:0 auto;padding-left:var(--pad);padding-right:var(--pad)}
 section{padding:clamp(56px,8vw,104px) 0;position:relative}
-section.wide{padding:clamp(84px,13vw,164px) 0}
 .eyebrow{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.18em;
-  text-transform:uppercase;color:var(--yellow);margin:0 0 18px;font-weight:500}
+  text-transform:uppercase;color:var(--pink);margin:0 0 18px;font-weight:500}
 .lede{font-size:clamp(17px,1.25rem,21px);color:#d9d8d4;max-width:62ch;line-height:1.6}
 .muted{color:var(--mute)}
 .mono{font-family:var(--f-mono)}
+.note{margin-top:26px;font-family:var(--f-mono);font-size:.75rem;
+  color:var(--mute-2);letter-spacing:.06em;line-height:1.7}
 
-/* разделительная дорожная разметка */
+/* разделительная разметка, розовая */
 .dash{height:3px;width:100%;background:repeating-linear-gradient(
-  90deg,var(--yellow) 0 34px,transparent 34px 62px);opacity:.85}
+  90deg,var(--pink) 0 34px,transparent 34px 62px);opacity:.9}
 
-/* ---------- появление (только transform+opacity) ---------- */
+/* ---------- появление ---------- */
 .rv{opacity:0;transform:translate3d(0,18px,0)}
 .rv.on{opacity:1;transform:none;transition:opacity .5s ease-out,transform .5s ease-out}
 @media (prefers-reduced-motion:reduce){
@@ -88,24 +85,24 @@ section.wide{padding:clamp(84px,13vw,164px) 0}
 .hero{min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;
   padding:0 0 clamp(40px,7vw,72px);position:relative;overflow:hidden}
 .hero-bg{position:absolute;inset:0;z-index:0;background:
-  radial-gradient(120% 90% at 70% 15%,#23232a 0%,transparent 60%),
+  radial-gradient(120% 90% at 60% 20%,#26202a 0%,transparent 62%),
   linear-gradient(180deg,#17171b 0%,#0c0c0e 78%)}
 .hero-bg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
-  object-position:62% 60%;opacity:.42}
-@media(min-width:860px){.hero-bg img{object-position:center 58%;opacity:.38}}
+  object-position:center 55%;opacity:.5}
+@media(min-width:860px){.hero-bg img{opacity:.46}}
 .hero-veil{position:absolute;inset:0;z-index:1;background:
-  linear-gradient(180deg,rgba(12,12,14,.42) 0%,rgba(12,12,14,.72) 55%,var(--ink) 100%)}
+  linear-gradient(180deg,rgba(12,12,14,.36) 0%,rgba(12,12,14,.7) 55%,var(--ink) 100%)}
 .hero .wrap{position:relative;z-index:2;width:100%}
-.hero h1{font-size:clamp(2.6rem,9.2vw,6.4rem);font-weight:600;letter-spacing:-.02em}
-.hero h1 .y{color:var(--yellow);display:block}
-.hero .sub{margin-top:22px;max-width:44ch;font-size:clamp(16px,1.15rem,20px);color:#cdccc8}
+.hero h1{font-size:clamp(2.5rem,8.8vw,6rem);font-weight:600;letter-spacing:-.02em}
+.hero h1 .y{color:var(--pink);display:block}
+.hero .sub{margin-top:22px;max-width:40ch;font-size:clamp(16px,1.15rem,20px);color:#cdccc8}
 .hero-meta{margin-top:34px;display:flex;flex-wrap:wrap;gap:10px 26px;
   font-family:var(--f-mono);font-size:.72rem;letter-spacing:.13em;
   text-transform:uppercase;color:var(--mute-2)}
 .scroll-hint{margin-top:38px;display:inline-flex;align-items:center;gap:10px;
   font-family:var(--f-mono);font-size:.7rem;letter-spacing:.16em;
-  text-transform:uppercase;color:var(--yellow)}
-.scroll-hint span{width:34px;height:1px;background:var(--yellow);display:block}
+  text-transform:uppercase;color:var(--pink)}
+.scroll-hint span{width:34px;height:1px;background:var(--pink);display:block}
 
 /* ---------- секция-заголовок ---------- */
 .h-block{max-width:34ch;margin-bottom:clamp(34px,5vw,54px)}
@@ -121,10 +118,19 @@ section.wide{padding:clamp(84px,13vw,164px) 0}
   padding:clamp(22px,3.2vw,32px)}
 .card h3{font-size:1.16rem;letter-spacing:0;margin-bottom:12px;font-weight:500}
 .card p{font-size:.95rem;color:var(--mute);line-height:1.6}
-.card .num{font-family:var(--f-mono);font-size:.7rem;color:var(--yellow);
+.card .num{font-family:var(--f-mono);font-size:.7rem;color:var(--pink);
   letter-spacing:.16em;display:block;margin-bottom:16px}
 
-/* ---------- проблема: скриншот ---------- */
+/* ---------- три кадра ---------- */
+.trio{display:grid;gap:clamp(14px,2.2vw,22px);grid-template-columns:1fr}
+@media(min-width:760px){.trio{grid-template-columns:repeat(3,1fr)}}
+.trio .step-n{font-family:var(--f-mono);font-size:.7rem;color:var(--pink);
+  letter-spacing:.16em;display:block;margin-bottom:10px}
+.trio h3{font-size:1.05rem;letter-spacing:0;font-weight:500;margin-bottom:8px}
+.trio p{font-size:.92rem;color:var(--mute);line-height:1.6;margin:0}
+.trio .figure{margin-bottom:16px}
+
+/* ---------- скриншот ---------- */
 .shot{border:1px solid var(--line);border-radius:3px;overflow:hidden;background:var(--ink-2)}
 .shot img{width:100%;aspect-ratio:1020/760;object-fit:cover;object-position:top center}
 .shot figcaption{padding:16px 20px;font-family:var(--f-mono);font-size:.74rem;
@@ -134,30 +140,30 @@ section.wide{padding:clamp(84px,13vw,164px) 0}
   font-family:var(--f-mono);font-size:.76rem;color:#e8b9a0;
   white-space:pre-wrap;word-break:break-word;overflow-wrap:anywhere}
 
-/* ---------- две колонки сегодня/станет ---------- */
+/* ---------- сегодня / станет ---------- */
 .vs{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))}
 .vs>div{padding:clamp(22px,3.2vw,30px);border-radius:3px;border:1px solid var(--line)}
 .vs .bad{background:#16100f;border-color:#3a201f}
-.vs .good{background:#0f1512;border-color:#1f3a2c}
+.vs .good{background:#16101a;border-color:#41213a}
 .vs h3{font-size:.78rem;font-family:var(--f-mono);letter-spacing:.16em;
   font-weight:500;margin-bottom:18px}
 .vs .bad h3{color:var(--red)}
-.vs .good h3{color:var(--green)}
+.vs .good h3{color:var(--pink)}
 .vs ul{margin:0;padding-left:18px;font-size:.94rem;color:var(--mute);line-height:1.7}
 .vs li{margin-bottom:7px}
 .vs .concl{margin-top:20px;padding-top:16px;border-top:1px solid var(--line);
   font-size:.97rem;color:var(--paper);font-weight:500}
 
-/* ---------- список вопросов ---------- */
+/* ---------- списки ---------- */
 .qlist{border-top:1px solid var(--line)}
 .qlist li{list-style:none;display:flex;gap:clamp(14px,3vw,28px);
   padding:clamp(18px,2.6vw,26px) 0;border-bottom:1px solid var(--line);align-items:baseline}
 .qlist ol,.qlist ul{margin:0;padding:0}
-.qlist .n{font-family:var(--f-mono);font-size:.74rem;color:var(--yellow);
+.qlist .n{font-family:var(--f-mono);font-size:.74rem;color:var(--pink);
   flex:0 0 auto;min-width:2ch}
 .qlist .t{font-size:clamp(15px,1.08rem,19px);color:#dedcd7}
 
-/* ---------- продукт / экология ---------- */
+/* ---------- сплит и фигуры ---------- */
 .split{display:grid;gap:clamp(24px,4vw,52px);align-items:center;
   grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr))}
 .figure{border:1px solid var(--line);border-radius:3px;overflow:hidden;background:var(--ink-2)}
@@ -167,11 +173,11 @@ section.wide{padding:clamp(84px,13vw,164px) 0}
   letter-spacing:.04em}
 .figpair{display:grid;gap:14px}
 .figure.sq img{aspect-ratio:1/1}
+.figure.wide img{aspect-ratio:16/9}
 .chipwrap{display:grid;gap:clamp(20px,3vw,34px);align-items:start;
   grid-template-columns:1fr}
 @media(min-width:820px){.chipwrap{grid-template-columns:1.45fr .85fr}}
-.figure.wide img{aspect-ratio:16/9}
-.pull{border-left:3px solid var(--yellow);padding:6px 0 6px 22px;margin:26px 0;
+.pull{border-left:3px solid var(--pink);padding:6px 0 6px 22px;margin:26px 0;
   font-family:var(--f-display);font-size:clamp(1.3rem,3.4vw,2rem);
   line-height:1.22;text-transform:uppercase;font-weight:500}
 
@@ -180,33 +186,33 @@ section.wide{padding:clamp(84px,13vw,164px) 0}
 .chip{border:1px solid var(--line);background:var(--ink-2);border-radius:2px;
   padding:11px 16px;font-size:.85rem;color:#cfcec9}
 .chip::before{content:"";display:inline-block;width:5px;height:5px;
-  background:var(--yellow);margin-right:10px;vertical-align:middle}
+  background:var(--pink);margin-right:10px;vertical-align:middle}
 
 /* ---------- пакеты ---------- */
 .plans{display:grid;gap:14px;grid-template-columns:1fr}
 @media(min-width:1000px){.plans{grid-template-columns:repeat(3,1fr)}}
 .plan{background:var(--ink-2);border:1px solid var(--line);border-radius:3px;
   padding:clamp(24px,3.4vw,34px);display:flex;flex-direction:column}
-.plan.pick{border-color:var(--yellow);background:#16140e;position:relative}
+.plan.pick{border-color:var(--pink);background:#171015;position:relative}
 .plan.pick::before{content:"Рекомендую";position:absolute;top:0;right:0;
-  background:var(--yellow);color:#000;font-family:var(--f-mono);font-size:.62rem;
+  background:var(--pink);color:#12000a;font-family:var(--f-mono);font-size:.62rem;
   letter-spacing:.14em;text-transform:uppercase;padding:6px 12px;font-weight:500}
 .plan h3{font-size:1.3rem;margin-bottom:6px}
 .plan .price{font-family:var(--f-display);font-size:clamp(2.1rem,6vw,2.9rem);
-  color:var(--yellow);margin:14px 0 4px;font-weight:600;letter-spacing:-.01em}
+  color:var(--pink);margin:14px 0 4px;font-weight:600;letter-spacing:-.01em}
 .plan .who{font-size:.86rem;color:var(--mute-2);margin-bottom:20px;
   padding-bottom:20px;border-bottom:1px solid var(--line)}
 .plan ul{margin:0;padding:0;list-style:none;font-size:.93rem;color:var(--mute);line-height:1.55}
 .plan li{padding-left:20px;position:relative;margin-bottom:11px}
 .plan li::before{content:"";position:absolute;left:0;top:.62em;width:7px;height:1px;
-  background:var(--yellow)}
+  background:var(--pink)}
 .plan .base{font-size:.86rem;color:var(--mute-2);font-style:italic;margin-bottom:14px}
 
 /* ---------- этапы ---------- */
-.steps{counter-reset:s;border-top:1px solid var(--line)}
+.steps{border-top:1px solid var(--line)}
 .step{display:grid;gap:6px clamp(16px,3vw,32px);grid-template-columns:auto 1fr;
   padding:clamp(20px,2.8vw,28px) 0;border-bottom:1px solid var(--line)}
-.step .k{font-family:var(--f-mono);font-size:.74rem;color:var(--yellow);padding-top:.3em}
+.step .k{font-family:var(--f-mono);font-size:.74rem;color:var(--pink);padding-top:.3em}
 .step h3{font-size:1.1rem;letter-spacing:0;margin-bottom:6px;font-weight:500}
 .step p{font-size:.93rem;color:var(--mute);margin:0}
 .step .dur{grid-column:2;font-family:var(--f-mono);font-size:.72rem;color:var(--mute-2);
@@ -216,18 +222,18 @@ section.wide{padding:clamp(84px,13vw,164px) 0}
 .final{position:relative;overflow:hidden;text-align:left;
   padding:clamp(80px,13vw,170px) 0}
 .final-bg{position:absolute;inset:0;z-index:0;
-  background:linear-gradient(180deg,var(--ink) 0%,#14140f 55%,var(--ink) 100%)}
-.final-bg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.22}
+  background:linear-gradient(180deg,var(--ink) 0%,#170f14 55%,var(--ink) 100%)}
+.final-bg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.24}
 .final .wrap{position:relative;z-index:2}
 .final h2{font-size:clamp(1.9rem,6.2vw,4rem);max-width:18ch}
 .final .lede{margin-top:26px}
 
 .cta{display:inline-flex;align-items:center;gap:12px;margin-top:30px;
-  min-height:52px;padding:15px 28px;background:var(--yellow);color:#000;
+  min-height:52px;padding:15px 28px;background:var(--pink);color:#12000a;
   font-family:var(--f-mono);font-size:.8rem;letter-spacing:.1em;
   text-transform:uppercase;text-decoration:none;border-radius:3px;font-weight:500;
   transition:background .18s ease,transform .18s ease}
-.cta:hover{background:#ffd647}
+.cta:hover{background:#ff6aa5}
 .cta:active{transform:translateY(1px)}
 .cta:focus-visible{outline:3px solid var(--paper);outline-offset:3px}
 .cta-note{margin-top:14px;font-family:var(--f-mono);font-size:.74rem;
@@ -237,14 +243,13 @@ section.wide{padding:clamp(84px,13vw,164px) 0}
   font-family:var(--f-mono);font-size:.72rem;color:var(--mute-2);
   display:flex;flex-wrap:wrap;gap:10px 28px;letter-spacing:.1em;text-transform:uppercase}
 
-/* ---------- фотополоса-разделитель ---------- */
+/* ---------- фотополоса ---------- */
 .strip{position:relative;overflow:hidden;height:clamp(200px,36vh,400px);background:var(--ink-3)}
-.strip img{width:100%;height:100%;object-fit:cover;opacity:.6}
+.strip img{width:100%;height:100%;object-fit:cover;opacity:.62}
 .strip::after{content:"";position:absolute;inset:0;background:
   linear-gradient(180deg,rgba(12,12,14,.85) 0%,rgba(12,12,14,.25) 45%,rgba(12,12,14,.9) 100%)}
 .strip .ph{position:absolute;inset:0}
 
-/* ---------- заглушка вместо картинки ---------- */
 @media(max-width:520px){
   .eyebrow{font-size:.76rem;letter-spacing:.14em}
   .hero-meta{font-size:.76rem}
@@ -257,7 +262,7 @@ section.wide{padding:clamp(84px,13vw,164px) 0}
 .ph{background:
   repeating-linear-gradient(45deg,#141418 0 10px,#17171c 10px 20px);
   display:flex;align-items:center;justify-content:center;
-  font-family:var(--f-mono);font-size:.68rem;color:#4a4a52;
+  font-family:var(--f-mono);font-size:.68rem;color:#5c5c66;
   letter-spacing:.12em;text-transform:uppercase;text-align:center;padding:20px}
 .figure .ph{aspect-ratio:4/3}
 .figure.wide .ph{aspect-ratio:16/9}
@@ -267,7 +272,7 @@ section.wide{padding:clamp(84px,13vw,164px) 0}
 </head>
 <body>
 
-<!-- ГЕРОЙ -->
+<!-- ГЕРОЙ · КАДР 09 -->
 <header class="hero">
   <div class="hero-bg">
     <picture><source type="image/webp" srcset="img/01-hero-doroga-sm.webp 1300w, img/01-hero-doroga.webp 2000w" sizes="100vw"><img src="img/01-hero-doroga.jpg"
@@ -278,10 +283,10 @@ section.wide{padding:clamp(84px,13vw,164px) 0}
   <div class="hero-veil"></div>
   <div class="wrap">
     <p class="eyebrow">Консорциум ДОРСНАБ · dor-snab.com</p>
-    <h1>Новый сайт<span class="y">консорциума</span></h1>
-    <p class="sub">Что сейчас происходит с dor-snab.com и что я предлагаю с этим сделать. Цены в конце.</p>
+    <h1>Розовое платье<span class="y">на шинах БелАЗа</span></h1>
+    <p class="sub">Ваша идея. Вот что из неё получается, если довести до конца.</p>
     <div class="hero-meta">
-      <span>23 августа 2026</span>
+      <span>24 августа 2026</span>
       <span>Марк Макаров · MATERIA</span>
     </div>
     <p class="scroll-hint"><span></span>Листайте вниз</p>
@@ -292,117 +297,94 @@ section.wide{padding:clamp(84px,13vw,164px) 0}
 
 <main>
 
-<!-- ЗЕРКАЛО -->
+<!-- 01 · ИДЕЯ РАБОЧАЯ -->
 <section>
   <div class="wrap">
     <div class="h-block rv">
-      <p class="eyebrow">01 · Как есть сейчас</p>
-      <h2>Так выглядит первый экран сайта сегодня</h2>
-      <p class="lede">Так эту страницу видит каждый, кто заходит на dor-snab.com.</p>
-    </div>
-    <figure class="shot rv">
-      <picture><source type="image/webp" srcset="img/sait-kak-est-sm.webp 1100w, img/sait-kak-est.webp 1400w" sizes="(min-width:1180px) 1116px, 90vw"><img src="img/sait-kak-est.jpg"
-           srcset="img/sait-kak-est-sm.jpg 1100w, img/sait-kak-est.jpg 1400w"
-           sizes="(min-width:1180px) 1116px, 90vw"
-           alt="Главная страница dor-snab.com, снимок экрана"
-           width="1400" height="1043" loading="lazy" decoding="async"></picture>
-      <figcaption>Главная страница dor-snab.com, снимок экрана от 23 августа 2026</figcaption>
-    </figure>
-    <div class="codebad rv">В самом крупном блоке главной вместо описания консорциума
-выводится программный код:
-
-&lt;a class=»btn btn-primary» href=»uchastniki»&gt;ПОДРОБНЕЕ&lt;/a&gt;</div>
-    <p class="lede rv" style="margin-top:24px">При последнем редактировании текст вставили
-    с кавычками-ёлочками вместо программных. Браузер перестал понимать эти куски как команды
-    и теперь печатает их как есть. Таких мест я насчитал около тридцати.</p>
-  </div>
-</section>
-
-<!-- ТРИ ФАКТА -->
-<section style="background:var(--ink-2)">
-  <div class="wrap">
-    <div class="h-block rv">
-      <p class="eyebrow">02 · Что ещё видно сразу</p>
-      <h2>Дальше не лучше</h2>
+      <p class="eyebrow">01 · Ваша идея</p>
+      <h2>Идея рабочая. Три причины, почему</h2>
+      <p class="lede">Вы предложили эпатаж, фотосессию и шины БелАЗа как сырьё.
+      Разбираю, почему это не просто весело.</p>
     </div>
     <div class="grid g3">
       <div class="card rv"><span class="num">01</span>
-        <h3>Браузер пишет «не защищено»</h3>
-        <p>У сайта нет защищённого соединения. Проверяли напрямую: порт, через который
-        работает защита, не отвечает вообще. Данные из формы обратной связи идут
-        открытым текстом.</p></div>
+        <h3>У дорожников не бывает розового</h3>
+        <p>Откройте подряд десять сайтов производителей дорожной химии. Все жёлто-чёрные
+        или сине-серые, у всех каток на закате. Розовое на чёрном не занято никем.
+        Это редкий случай, когда отличаться ничего не стоит: цвет бесплатный.</p></div>
       <div class="card rv"><span class="num">02</span>
-        <h3>Последняя новость - 2017 год</h3>
-        <p>Самая поздняя новость - июль 2017 года. Внизу каждой страницы
-        стоит «© 2015–2018».</p></div>
+        <h3>История уже есть, её не надо выдумывать</h3>
+        <p>Шина отслужила, её перемололи, она легла в дорогу. Это не рекламная идея,
+        это ваш техпроцесс. Скопировать нельзя: у конкурента другое сырьё.</p></div>
       <div class="card rv"><span class="num">03</span>
-        <h3>Английская версия не переведена</h3>
-        <p>Меню переключается на английский, а содержание остаётся русским
-        и вперемешку с программным кодом.</p></div>
+        <h3>У продукта нет лица, а у вас есть</h3>
+        <p>АДМ - это аббревиатура, ГОСТы и таблица характеристик. Аббревиатуру никто
+        не пересылает знакомым. Человека пересылают. С лицом у консорциума появляется
+        то, что вообще можно репостнуть.</p></div>
     </div>
-    <p class="mono rv" style="margin-top:28px;font-size:.75rem;color:var(--mute-2);letter-spacing:.08em">
-      Всё это я проверил сам 23 августа 2026 года, прямо на сайте.</p>
+    <p class="pull rv">Вы придумали не фотосессию. Вы придумали, как показать переработку
+    так, чтобы это досмотрели до конца.</p>
   </div>
 </section>
 
-<!-- КТО ОТКРЫВАЕТ -->
-<section>
-  <div class="wrap">
-    <div class="h-block rv">
-      <p class="eyebrow">03 · Что это стоит компании</p>
-      <h2>Кто на самом деле открывает dor-snab.com</h2>
-      <p class="lede">Поставку никто не закажет прямо с сайта. Но перед тем как
-      выйти на разговор, компанию обязательно проверяют, и начинают с сайта.</p>
-    </div>
-    <div class="qlist rv">
-      <ul>
-        <li><span class="n">01</span><span class="t">Снабженец подрядчика: ему назвали ваш материал, он проверяет</span></li>
-        <li><span class="n">02</span><span class="t">Инженер в поиске замены импортной добавке</span></li>
-        <li><span class="n">03</span><span class="t">Компания, которая думает, входить ли в консорциум</span></li>
-        <li><span class="n">04</span><span class="t">Иностранный партнёр, ради него и делалась английская версия</span></li>
-        <li><span class="n">05</span><span class="t">Профильное ведомство перед выставкой или конференцией</span></li>
-      </ul>
-    </div>
-    <p class="pull rv">По сайту вам ничего не закажут. А вот вычеркнуть вас
-    из короткого списка по нему могут, и вы об этом не узнаете.</p>
-  </div>
-</section>
-
-<!-- 8 СЕКУНД -->
+<!-- 02 · ВИЗУАЛЬНЫЙ ЯЗЫК -->
 <section style="background:var(--ink-2)">
   <div class="wrap">
     <div class="h-block rv">
-      <p class="eyebrow">04 · Первые секунды</p>
-      <h2>Что он успевает понять за первые секунды</h2>
+      <p class="eyebrow">02 · Визуальный язык</p>
+      <h2>Шина. Крошка. Дорога.</h2>
+      <p class="lede">Три кадра, на которых держится весь сайт. Один путь материала,
+      снятый три раза.</p>
     </div>
-    <div class="vs rv">
-      <div class="bad">
-        <h3>Сегодня он видит</h3>
-        <ul>
-          <li>Программный код в главном блоке</li>
-          <li>Предупреждение браузера о незащищённом соединении</li>
-          <li>Новости девятилетней давности</li>
-          <li>Копирайт 2018 года</li>
-        </ul>
-        <p class="concl">Дальше он не листает: компания выглядит закрывшейся.</p>
+    <div class="trio">
+      <div class="rv">
+        <!-- КАДР 10 · стена шин -->
+        <figure class="figure"><div class="ph">Кадр 10 · стена шин</div></figure>
+        <span class="step-n">Шаг 01</span>
+        <h3>Отслужившая покрышка</h3>
+        <p>Сжигать вредно, закапывать бессмысленно: покрышка разлагается больше ста лет.</p>
       </div>
-      <div class="good">
-        <h3>Должен видеть</h3>
-        <ul>
-          <li>Что вы производите и подо что это берут</li>
-          <li>Сертификаты, не отходя от описания</li>
-          <li>Объекты, где материал уже лежит</li>
-          <li>Живой человек с телефоном и сроком ответа</li>
-        </ul>
-        <p class="concl">Дальше он читает: с этими можно работать.</p>
+      <div class="rv">
+        <figure class="figure">
+          <picture><source type="image/webp" srcset="img/03-krosha-iz-shin-sm.webp 1100w, img/03-krosha-iz-shin.webp 1200w" sizes="(min-width:760px) 32vw, 90vw"><img src="img/03-krosha-iz-shin.jpg"
+               srcset="img/03-krosha-iz-shin-sm.jpg 1100w, img/03-krosha-iz-shin.jpg 1200w"
+               sizes="(min-width:760px) 32vw, 90vw"
+               alt="Резиновая крошка из переработанных автопокрышек"
+               width="1200" height="896" loading="lazy" decoding="async"></picture>
+        </figure>
+        <span class="step-n">Шаг 02</span>
+        <h3>Сырьё для модификатора</h3>
+        <p>То самое «сырьё», с которого начинается ваш продукт.</p>
+      </div>
+      <div class="rv">
+        <figure class="figure">
+          <picture><source type="image/webp" srcset="img/06-doroga-sm.webp 1300w, img/06-doroga.webp 2000w" sizes="(min-width:760px) 32vw, 90vw"><img src="img/06-doroga.jpg"
+               srcset="img/06-doroga-sm.jpg 1300w, img/06-doroga.jpg 2000w"
+               sizes="(min-width:760px) 32vw, 90vw"
+               alt="Дорожное покрытие"
+               width="2000" height="849" loading="lazy" decoding="async"></picture>
+        </figure>
+        <span class="step-n">Шаг 03</span>
+        <h3>Покрытие, которое служит дольше</h3>
+        <p>Модификатор меняет свойства битума: ниже температура хрупкости, выше пластичность.</p>
       </div>
     </div>
-    <p class="lede rv" style="margin-top:28px">Речь не про красоту. Вопрос в том,
-    наберёт человек ваш номер или закроет вкладку.</p>
+    <div class="split rv" style="margin-top:clamp(34px,5vw,56px)">
+      <div>
+        <p>Чёрный выбирать не надо: это асфальт и резина, он и так везде.
+        Розовый становится единственным акцентом на всём сайте - заголовки, кнопки,
+        подписи. Даже полосы разметки в оформлении розовые.</p>
+        <p>Третьего цвета не будет. Два цвета запоминаются, пять не запоминает никто.</p>
+      </div>
+      <div>
+        <p class="pull" style="margin-top:0">Жёлто-чёрный есть у каждого дорожника.
+        Розовое на чёрном - ни у кого.</p>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- ФОТОПОЛОСА -->
+<!-- ФОТОПОЛОСА · КАДР 11 -->
 <div class="strip">
   <picture><source type="image/webp" srcset="img/02-asfalt-makro-sm.webp 1300w, img/02-asfalt-makro.webp 1800w" sizes="100vw"><img src="img/02-asfalt-makro.jpg"
        srcset="img/02-asfalt-makro-sm.jpg 1300w, img/02-asfalt-makro.jpg 1800w"
@@ -410,22 +392,107 @@ section.wide{padding:clamp(84px,13vw,164px) 0}
        loading="lazy" decoding="async"></picture>
 </div>
 
-<!-- ПРОДУКТ / ЭКОЛОГИЯ -->
+<!-- 03 · ПЕРВЫЙ ЭКРАН -->
 <section>
   <div class="wrap">
     <div class="h-block rv">
-      <p class="eyebrow">05 · Что у вас есть</p>
-      <h2>АДМ: то, о чём сайт почти не говорит</h2>
+      <p class="eyebrow">03 · Первый экран</p>
+      <h2>На первом экране - вы</h2>
+      <p class="lede">Сейчас на главной вместо описания консорциума печатается
+      программный код. Вот эта страница, снимок сделан 24 августа.</p>
+    </div>
+    <figure class="shot rv">
+      <picture><source type="image/webp" srcset="img/sait-kak-est-sm.webp 1100w, img/sait-kak-est.webp 1400w" sizes="(min-width:1180px) 1116px, 90vw"><img src="img/sait-kak-est.jpg"
+           srcset="img/sait-kak-est-sm.jpg 1100w, img/sait-kak-est.jpg 1400w"
+           sizes="(min-width:1180px) 1116px, 90vw"
+           alt="Главная страница dor-snab.com, снимок экрана"
+           width="1400" height="1043" loading="lazy" decoding="async"></picture>
+      <figcaption>Главная страница dor-snab.com, снимок экрана от 24 августа 2026</figcaption>
+    </figure>
+    <div class="vs rv" style="margin-top:clamp(28px,4vw,44px)">
+      <div class="bad">
+        <h3>Сегодня здесь</h3>
+        <ul>
+          <li>Программный код вместо текста</li>
+          <li>Заголовок, который ничего не обещает</li>
+          <li>Ни одного человека в кадре</li>
+          <li>Год в подвале: 2018</li>
+        </ul>
+        <p class="concl">Вкладку закрывают за три секунды.</p>
+      </div>
+      <div class="good">
+        <h3>Будет здесь</h3>
+        <ul>
+          <li>Ваш кадр во весь экран, без рамок и подложек</li>
+          <li>Одна фраза, которую запоминают</li>
+          <li>Ссылки на ваши профили сразу, на видном месте</li>
+          <li>Кнопка запроса модификатора рядом с ними</li>
+        </ul>
+        <p class="concl">Досматривают до конца и идут к вам в профиль.</p>
+      </div>
+    </div>
+    <p class="lede rv" style="margin-top:28px">Кадр со съёмки я не подставляю заранее и
+    не рисую: это ваша фотография, а не моя фантазия. В презентации стоят референсы
+    настроения - как будет выглядеть свет, цвет и масштаб.</p>
+  </div>
+</section>
+
+<!-- 04 · ЗАЧЕМ ВООБЩЕ САЙТ -->
+<section style="background:var(--ink-2)">
+  <div class="wrap">
+    <div class="h-block rv">
+      <p class="eyebrow">04 · Зачем вообще сайт</p>
+      <h2>Вы написали: им никто не пользуется</h2>
+      <p class="lede">Так и есть. Причина простая: на него никто не вёл.</p>
     </div>
     <div class="split">
       <div class="rv">
-        <p>Активный дорожный модификатор меняет свойства битума: снижает температуру
-        хрупкости, повышает пластичность. Смесь не расслаивается при перевозке
-        и не требует стабилизирующей добавки на основе целлюлозы.</p>
-        <p>И отдельно то, что сейчас стоит последним абзацем в самом низу страницы:</p>
-        <p class="pull">Модификатор делают из отработанных автопокрышек</p>
-        <p>Сжигать вредно, закапывать бессмысленно: покрышка разлагается больше ста лет.
-        Переработка в модификатор - вариант, при котором она уходит в дело.</p>
+        <p>Сайт не приводит людей сам. Людей приводите вы: сторис, рилс, репост,
+        ссылка в переписке, визитка на выставке. Сайт - это место, куда они приходят.
+        Пока вести было некому, он и правда был не нужен.</p>
+        <p>Как только появляется бренд и профили, которые вы ведёте, сайт становится
+        единственной страницей, где человек видит вас целиком: и продукт, и документы,
+        и все ваши профили в одном месте.</p>
+      </div>
+      <div class="rv">
+        <p class="pull" style="margin-top:0">Ленту пролистывают и забывают за сутки.
+        Сайт стоит на одном адресе и никуда не девается.</p>
+        <p>И обратно: с сайта человек попадает в ваш профиль, из профиля на сайт.
+        Не два не связанных места, а замкнутый круг.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ФОТОПОЛОСА 2 -->
+<div class="strip">
+  <picture><source type="image/webp" srcset="img/01-hero-doroga-sm.webp 1300w, img/01-hero-doroga.webp 2000w" sizes="100vw"><img src="img/01-hero-doroga.jpg"
+       srcset="img/01-hero-doroga-sm.jpg 1300w, img/01-hero-doroga.jpg 2000w"
+       sizes="100vw" alt="" width="2000" height="1116"
+       loading="lazy" decoding="async"></picture>
+</div>
+
+<!-- 05 · ЧТО ЗА ПЕРВЫМ ЭКРАНОМ -->
+<section>
+  <div class="wrap">
+    <div class="h-block rv">
+      <p class="eyebrow">05 · Что за первым экраном</p>
+      <h2>Эпатаж приводит. Держит содержание</h2>
+      <p class="lede">Яркая обложка нужна, чтобы страницу открыли. Дальше должно быть
+      что читать, иначе получится красивая пустая страница и второй раз никто не вернётся.</p>
+    </div>
+    <div class="split">
+      <div class="rv">
+        <p>Поэтому за первым экраном ставим то, что у вас реально есть. Активный дорожный
+        модификатор: какую задачу решает, характеристики таблицей, выгода против привычного
+        решения. Смесь не расслаивается при перевозке и не требует стабилизирующей добавки
+        на основе целлюлозы - это аргумент для снабженца, и он должен быть на странице,
+        а не в письме через три дня.</p>
+        <p class="pull">Розовое платье приводит человека. Модификатор и документы его удерживают.</p>
+        <p>И отдельно про партнёров. Кроме вас в консорциуме есть другие участники,
+        и сайт остаётся их рабочей площадкой: продукция, документы, условия поставки,
+        контакты - всё это никуда не уходит. Меняется обложка и голос сайта,
+        а не его содержимое.</p>
       </div>
       <div class="figpair rv">
         <figure class="figure">
@@ -437,27 +504,24 @@ section.wide{padding:clamp(84px,13vw,164px) 0}
           <figcaption>Модификатор меняет свойства битума</figcaption>
         </figure>
         <figure class="figure">
-          <picture><source type="image/webp" srcset="img/03-krosha-iz-shin-sm.webp 1100w, img/03-krosha-iz-shin.webp 1200w" sizes="(min-width:760px) 46vw, 90vw"><img src="img/03-krosha-iz-shin.jpg"
-               srcset="img/03-krosha-iz-shin-sm.jpg 1100w, img/03-krosha-iz-shin.jpg 1200w"
+          <picture><source type="image/webp" srcset="img/05-ukladka-sm.webp 1300w, img/05-ukladka.webp 1800w" sizes="(min-width:760px) 46vw, 90vw"><img src="img/05-ukladka.jpg"
+               srcset="img/05-ukladka-sm.jpg 1300w, img/05-ukladka.jpg 1800w"
                sizes="(min-width:760px) 46vw, 90vw"
-               alt="Резиновая крошка из переработанных автопокрышек"
-               width="1200" height="896" loading="lazy" decoding="async"></picture>
-          <figcaption>Сырьё - отработанные автопокрышки</figcaption>
+               alt="Укладка асфальтобетонной смеси"
+               width="1800" height="1005" loading="lazy" decoding="async"></picture>
+          <figcaption>Объекты, где материал уже лежит</figcaption>
         </figure>
       </div>
     </div>
-    <p class="lede rv" style="margin-top:36px">Про переработку покрышек надо говорить
-    на первом экране. Тема на слуху, под неё идут отдельные государственные программы,
-    а у вас она лежит в самом низу страницы, под описанием состава.</p>
   </div>
 </section>
 
-<!-- РЕГАЛИИ -->
+<!-- 06 · ПОДТВЕРЖДЕНИЯ -->
 <section style="background:var(--ink-2)">
   <div class="wrap">
     <div class="h-block rv">
       <p class="eyebrow">06 · Подтверждения</p>
-      <h2>Подтверждения, которые никто не видит</h2>
+      <h2>То, что сейчас никто не находит</h2>
     </div>
     <div class="chipwrap">
     <div>
@@ -470,8 +534,8 @@ section.wide{padding:clamp(84px,13vw,164px) 0}
       <span class="chip">Совместные программы со Свердловской областью</span>
     </div>
     <p class="lede rv" style="margin-top:30px">Сейчас часть этого лежит ссылками на скачивание
-    внутри одной страницы, часть - логотипами в подвале без подписей. Для снабженца, который
-    решает, стоит ли с вами вообще связываться, это и есть главный аргумент. Сейчас его надо искать.</p>
+    внутри одной страницы, часть - логотипами в подвале без подписей. Для человека, который
+    решает, стоит ли с вами связываться, это и есть главный аргумент. Сейчас его надо искать.</p>
     </div>
     <figure class="figure sq rv">
       <picture><source type="image/webp" srcset="img/08-razmetka.webp"><img src="img/08-razmetka.jpg"
@@ -482,125 +546,122 @@ section.wide{padding:clamp(84px,13vw,164px) 0}
   </div>
 </section>
 
-<!-- ПЯТЬ ВОПРОСОВ -->
+<!-- 07 · ЧТО ПОЯВИТСЯ -->
 <section>
   <div class="wrap">
     <div class="h-block rv">
-      <p class="eyebrow">07 · Пробелы</p>
+      <p class="eyebrow">07 · Что появится</p>
       <h2>Чего на сайте нет вообще</h2>
+      <p class="lede">Шесть вещей, которые спрашивают до звонка, а не на звонке.</p>
     </div>
     <div class="qlist rv">
       <ul>
-        <li><span class="n">01</span><span class="t">На каких объектах материал уже применялся</span></li>
-        <li><span class="n">02</span><span class="t">Сколько экономит подрядчику против обычного решения</span></li>
-        <li><span class="n">03</span><span class="t">Как получить техническую консультацию и с кем говорить</span></li>
-        <li><span class="n">04</span><span class="t">Какие условия поставки и от какого объёма отгружают</span></li>
+        <li><span class="n">01</span><span class="t">Где материал уже лежит: объекты, годы, километры</span></li>
+        <li><span class="n">02</span><span class="t">Сколько экономит подрядчику против привычного решения</span></li>
+        <li><span class="n">03</span><span class="t">Все сертификаты в одном месте, скачиваются одним файлом</span></li>
+        <li><span class="n">04</span><span class="t">С кем говорить: имя, телефон, срок ответа</span></li>
         <li><span class="n">05</span><span class="t">Как войти в консорциум новому участнику</span></li>
+        <li><span class="n">06</span><span class="t">Все ваши профили в соцсетях на видном месте</span></li>
       </ul>
     </div>
-    <p class="lede rv" style="margin-top:28px">Эти вопросы задают до звонка, а не на звонке.
-    Ответов нет - значит звонить не о чем, и человек идёт к следующему поставщику.</p>
+  </div>
+</section>
+
+<!-- 08 · СКУЧНАЯ ЧАСТЬ -->
+<section style="background:var(--ink-2)">
+  <div class="wrap">
+    <div class="h-block rv">
+      <p class="eyebrow">08 · Скучная, но обязательная часть</p>
+      <h2>Что чиним заодно</h2>
+      <p class="lede">Раз всё равно пересобираем сайт, эти вещи закрываются попутно.
+      Я проверил их сам 24 августа, прямо на dor-snab.com.</p>
+    </div>
+    <div class="grid g3">
+      <div class="card rv"><span class="num">01</span>
+        <h3>Браузер пишет «не защищено»</h3>
+        <p>Защищённого соединения нет. Проверял напрямую: порт, через который работает
+        защита, не отвечает вообще. Данные из формы обратной связи идут открытым текстом.</p></div>
+      <div class="card rv"><span class="num">02</span>
+        <h3>Последняя новость - 2017 год</h3>
+        <p>Самая поздняя новость - июль 2017 года. Внизу каждой страницы стоит
+        «© 2015–2018». Сайт выглядит брошенным, хотя компания работает.</p></div>
+      <div class="card rv"><span class="num">03</span>
+        <h3>Английская версия не переведена</h3>
+        <p>Меню переключается на английский, а содержание остаётся русским
+        и вперемешку с программным кодом.</p></div>
+    </div>
+    <div class="codebad rv">В самом крупном блоке главной вместо описания консорциума
+выводится программный код:
+
+&lt;a class=»btn btn-primary» href=»uchastniki»&gt;ПОДРОБНЕЕ&lt;/a&gt;</div>
+    <p class="lede rv" style="margin-top:24px">При последнем редактировании текст вставили
+    с кавычками-ёлочками вместо программных. Браузер перестал понимать эти куски как команды
+    и печатает их как есть. Таких мест я насчитал около тридцати.</p>
   </div>
 </section>
 
 <div class="dash"></div>
 
-<!-- ФОТОПОЛОСА 2 -->
-<div class="strip">
-  <picture><source type="image/webp" srcset="img/05-ukladka-sm.webp 1300w, img/05-ukladka.webp 1800w" sizes="100vw"><img src="img/05-ukladka.jpg"
-       srcset="img/05-ukladka-sm.jpg 1300w, img/05-ukladka.jpg 1800w"
-       sizes="100vw" alt="" width="1800" height="1005"
-       loading="lazy" decoding="async"></picture>
-</div>
-
-<!-- КАКИМ СТАНЕТ -->
-<section style="background:var(--ink-2)">
-  <div class="wrap">
-    <div class="h-block rv">
-      <p class="eyebrow">08 · Решение</p>
-      <h2>Каким станет сайт</h2>
-      <p class="lede">Четыре блока ниже - это четыре проблемы из первой половины, закрытые.</p>
-    </div>
-    <div class="grid g2">
-      <div class="card rv"><span class="num">Первый экран</span>
-        <h3>Кто вы и зачем вы мне</h3>
-        <p>Человек сразу видит, что производит консорциум, для каких задач и с какими
-        подтверждениями. Без абзаца про миссию и динамично развивающуюся компанию.
-        Плюс защищённое соединение и нормальная работа с телефона.</p></div>
-      <div class="card rv"><span class="num">Страница материала</span>
-        <h3>Инженер получает ответ на странице</h3>
-        <p>Отдельная страница под каждый материал: какую задачу решает, характеристики
-        таблицей, выгода против привычного решения, сертификаты рядом с описанием,
-        запрос технической консультации в один клик. А не письмо через три дня.</p></div>
-      <div class="card rv"><span class="num">Документы</span>
-        <h3>Всё в одном месте</h3>
-        <p>Сертификаты, техрегламенты и паспорта продукции собраны вместе, открываются
-        в один клик и скачиваются одним файлом. Сейчас, чтобы их найти, нужно знать,
-        на какой странице искать.</p></div>
-      <div class="card rv"><span class="num">Английская версия</span>
-        <h3>Полный перевод, а не только меню</h3>
-        <p>Переведено содержание целиком, с отдельными формулировками под зарубежного
-        партнёра: сертификация, стандарты, условия поставки.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- ПАКЕТЫ -->
+<!-- 09 · ФОРМАТЫ -->
 <section>
   <div class="wrap">
     <div class="h-block rv">
       <p class="eyebrow">09 · Форматы работы</p>
       <h2>Три формата, разный объём работ</h2>
-      <p class="lede">Дешевле не значит хуже сделано. Разница в объёме: сколько страниц
-      и как далеко идём по задачам. Технические проблемы, о которых шла речь выше,
-      закрывает любой из трёх.</p>
+      <p class="lede">Дешевле не значит хуже сделано. Разница в объёме: как далеко идём
+      от сайта к бренду. Технические проблемы из прошлого раздела закрывает любой из трёх.</p>
     </div>
     <div class="plans">
       <div class="plan rv">
-        <h3>Сайт под переговоры и экспорт</h3>
+        <h3>Бренд целиком</h3>
         <p class="price">$7 000</p>
-        <p class="who">Когда впереди новые участники, инвестиции или выход за границу</p>
+        <p class="who">Когда нужен не сайт, а узнаваемое имя</p>
         <p class="base">Всё из среднего формата, плюс:</p>
         <ul>
-          <li>Карта объектов, где материал уже применялся</li>
-          <li>Кейсы с результатами и цифрами</li>
-          <li>Отдельный раздел про переработку покрышек и экологию</li>
-          <li>Английская версия под зарубежного партнёра: стандарты, сертификация, условия поставки на их языке</li>
+          <li>Сценарий съёмки: список кадров, референсы, свет, композиция. Готовое задание фотографу</li>
+          <li>Ваши соцсети в одном стиле с сайтом: обложки, шаблоны постов, аватары</li>
+          <li>Отдельный раздел про переработку покрышек: как отслужившая шина становится дорогой</li>
+          <li>Английская версия под зарубежного партнёра: стандарты, сертификация, условия поставки</li>
           <li>Три месяца сопровождения после запуска</li>
         </ul>
       </div>
       <div class="plan pick rv">
-        <h3>Сайт, который приводит заявки</h3>
+        <h3>Сайт с характером</h3>
         <p class="price">$5 500</p>
-        <p class="who">Когда нужно, чтобы сайт приносил обращения, а не просто был</p>
+        <p class="who">Когда нужен сайт, который не стыдно поставить в шапку профиля</p>
         <p class="base">Всё из базового формата, плюс:</p>
         <ul>
+          <li>Первый экран собран под вашу съёмку: кадр во весь экран, одна фраза</li>
+          <li>Блок со всеми профилями на видном месте, а не значками в подвале</li>
           <li>Страницы материалов переделаны в рабочие: характеристики таблицей, выгода в цифрах, сертификаты рядом</li>
-          <li>Все сертификаты и техрегламенты выложены и доступны в один клик</li>
-          <li>Заявки и запросы собираются в одно место, ни один не теряется</li>
+          <li>Все документы в одном месте, открываются и скачиваются в один клик</li>
+          <li>Заявки собираются в одно место, ни одна не теряется</li>
           <li>Страницы собраны под отраслевые запросы, чтобы вас находили поиском</li>
         </ul>
       </div>
       <div class="plan rv">
-        <h3>Починить и переписать</h3>
+        <h3>Переодеть</h3>
         <p class="price">$4 000</p>
         <p class="who">Когда надо закрыть вопрос и больше к нему не возвращаться</p>
         <ul>
           <li>Новый сайт на современном движке вместо версии 2014 года</li>
-          <li>Защищённое соединение</li>
-          <li>Корректная работа на телефоне</li>
-          <li>Восемь страниц как сейчас, но содержание переписано заново</li>
-          <li>Английская версия, переведённая целиком, а не только меню</li>
-          <li>Актуальные новости и год</li>
+          <li>Новый стиль: чёрное и розовое, без стоковых катков на закате</li>
+          <li>Защищённое соединение и нормальная работа с телефона</li>
+          <li>Восемь страниц как сейчас, содержание переписано заново</li>
+          <li>Английская версия целиком, а не только меню</li>
+          <li>Ссылки на ваши соцсети</li>
         </ul>
       </div>
     </div>
-    <p class="mono rv" style="margin-top:26px;font-size:.75rem;color:var(--mute-2);letter-spacing:.06em">
-      Ваш личный сайт-визитка - отдельный проект, в эти суммы он не входит. Посчитаю его отдельно.</p>
+    <p class="note rv">В формате «Бренд целиком» я делаю сценарий и раскадровку съёмки.
+    Работу фотографа, площадку и всё, что снимается на месте, организуете вы у себя -
+    это в сумму не входит.<br>
+    Ваш личный сайт-визитка - отдельный проект, в эти суммы он тоже не входит.
+    Посчитаю его отдельно.</p>
   </div>
 </section>
 
-<!-- ЭТАПЫ -->
+<!-- 10 · КАК ИДЁТ РАБОТА -->
 <section style="background:var(--ink-2)">
   <div class="wrap">
     <div class="h-block rv">
@@ -611,28 +672,30 @@ section.wide{padding:clamp(84px,13vw,164px) 0}
     </div>
     <div class="steps rv">
       <div class="step"><span class="k">01</span><div>
-        <h3>Согласование структуры</h3>
-        <p>Разбираем, что должно быть на сайте и в каком порядке. Здесь же собираем
-        материалы: тексты, фото объектов, документы.</p></div>
+        <h3>Разбираем идею и структуру</h3>
+        <p>Что должно быть на сайте и в каком порядке, какие кадры нужны на съёмке.
+        Здесь же собираем материалы: тексты, фото объектов, документы, ссылки на профили.</p></div>
         <span class="dur">2–3 дня</span></div>
       <div class="step"><span class="k">02</span><div>
-        <h3>Дизайн главной</h3>
-        <p>Показываю первый экран и общий стиль до того, как собирается весь сайт.
-        Здесь я на правки и рассчитываю: переделать один экран дешевле, чем весь сайт.</p></div>
+        <h3>Первый экран</h3>
+        <p>Показываю первый экран и стиль до того, как собирается весь сайт.
+        Здесь я и рассчитываю на правки: переделать один экран дешевле, чем весь сайт.</p></div>
         <span class="dur">3–4 дня</span></div>
       <div class="step"><span class="k">03</span><div>
         <h3>Сборка</h3>
-        <p>Все страницы, содержание, английская версия.</p></div>
+        <p>Все страницы, содержание, документы, английская версия.</p></div>
         <span class="dur">7–10 дней</span></div>
       <div class="step"><span class="k">04</span><div>
         <h3>Проверка и запуск</h3>
         <p>Скорость, телефон, формы, защищённое соединение, перенос на ваш адрес.</p></div>
         <span class="dur">2–3 дня</span></div>
     </div>
+    <p class="note rv">Если делаем съёмку, между первым и вторым этапом добавляется время
+    на неё. Сколько именно - зависит от вашего графика, а не от моего.</p>
   </div>
 </section>
 
-<!-- УСЛОВИЯ -->
+<!-- 11 · УСЛОВИЯ -->
 <section>
   <div class="wrap">
     <div class="grid g2">
@@ -640,8 +703,9 @@ section.wide{padding:clamp(84px,13vw,164px) 0}
         <p class="eyebrow">11 · Что нужно с вашей стороны</p>
         <div class="qlist" style="margin-top:20px">
           <ul>
-            <li><span class="n">-</span><span class="t">Доступ к домену dor-snab.com. Сам сайт остаётся работать до дня переключения</span></li>
+            <li><span class="n">-</span><span class="t">Доступ к домену dor-snab.com. Сам сайт работает до дня переключения</span></li>
             <li><span class="n">-</span><span class="t">Материалы: фото объектов и производства, документы, актуальный список участников</span></li>
+            <li><span class="n">-</span><span class="t">Ссылки на все ваши профили в соцсетях</span></li>
             <li><span class="n">-</span><span class="t">Один человек, который принимает работу и утверждает макеты</span></li>
             <li><span class="n">-</span><span class="t">Полчаса на созвон в начале и по полчаса на приёмку каждого этапа</span></li>
           </ul>
@@ -662,7 +726,7 @@ section.wide{padding:clamp(84px,13vw,164px) 0}
   </div>
 </section>
 
-<!-- ФИНАЛ -->
+<!-- ФИНАЛ · КАДР 12 -->
 <section class="final">
   <div class="final-bg">
     <picture><source type="image/webp" srcset="img/06-doroga-sm.webp 1300w, img/06-doroga.webp 2000w" sizes="100vw"><img src="img/06-doroga.jpg"
@@ -672,13 +736,13 @@ section.wide{padding:clamp(84px,13vw,164px) 0}
   </div>
   <div class="wrap">
     <p class="eyebrow rv">Ближайший шаг</p>
-    <h2 class="rv">Консорциум работает одиннадцать лет. Сайт об этом больше не говорит.</h2>
-    <p class="lede rv">Продукт, который делают из старых покрышек и который меняет свойства
-    дорожного покрытия, сейчас описан тремя абзацами на странице со сломанной разметкой.
-    На то, чтобы это исправить, нужен месяц.</p>
-    <p class="lede rv" style="margin-top:32px">Выберите формат - и я соберу под него точный план:
-    какие страницы, что нужно от вас и по каким дням что происходит. Если удобнее сначала
-    обсудить голосом, скажите, когда вам позвонить.</p>
+    <h2 class="rv">Сайт есть. Идея есть. Осталось решить, насколько громко.</h2>
+    <p class="lede rv">Консорциум работает одиннадцать лет и делает модификатор
+    из отслуживших покрышек. Сейчас нет ни одного места в интернете, где это выглядело бы
+    интересно. Месяц - и такое место появляется.</p>
+    <p class="lede rv" style="margin-top:32px">Выберите формат, и я соберу точный план:
+    какие страницы, какие кадры нужны на съёмке, что нужно от вас и по каким дням
+    что происходит. Если удобнее сначала голосом - скажите, когда позвонить.</p>
     <a class="cta rv" href="mailto:mark.materia.ai@gmail.com?subject=%D0%A1%D0%B0%D0%B9%D1%82%20%D0%94%D0%9E%D0%A0%D0%A1%D0%9D%D0%90%D0%91">Написать Марку</a>
     <p class="cta-note rv">или ответьте прямо в переписке, где получили эту ссылку</p>
   </div>
@@ -689,7 +753,7 @@ section.wide{padding:clamp(84px,13vw,164px) 0}
 <footer class="wrap">
   <div class="foot">
     <span>Марк Макаров · MATERIA</span>
-    <span>23 августа 2026</span>
+    <span>24 августа 2026</span>
     <span>Презентация подготовлена для консорциума ДОРСНАБ</span>
   </div>
 </footer>
